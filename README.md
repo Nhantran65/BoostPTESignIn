@@ -1,5 +1,1 @@
-- Download and install NodeJS: https://nodejs.org/en/download/
-- Open Terminal in project
-- npm install -g
-- npm install
-- npm run dev
+This is a basic Website BoostPTE Sign-in which is cloned by Nhan Tran 
