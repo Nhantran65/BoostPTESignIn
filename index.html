@@ -7,7 +7,7 @@
     <title>BoostPTE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,800;1,800&family=Poppins:ital,wght@0,300;0,400;0,700;1,600&display=swap" 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,800;1,800&family=Poppins:ital,wght@0,300;0,400;0,700;1,600&display=swap" 
     rel="stylesheet">
     <link rel="stylesheet" href="./build/tailwind.css" />
     <link rel="stylesheet" href="./build/app.css" />
@@ -39,9 +39,9 @@
                 <div class="custom-input__wrap">
                   <input class="custom-input__input 
                         flex-1 w-full 
-                        rounded-6 object-cover 
+                        rounded-md object-cover 
                         px-2 py-5
-                        border border-solid border-[#d9d9d9]  " 
+                        border border-solid border-[#d9d9d9]   " 
                         autocomplete="off"
                         name="userEmail"
                         placeholder="johndoe@gmail.com "
@@ -55,7 +55,7 @@
                 <div class="custom-input__wrap">
                   <input class="custom-input__input 
                         flex-1 w-full 
-                        rounded-6 object-cover 
+                        rounded-md object-cover 
                         px-2 py-5
                         border border-solid border-[#d9d9d9]  " 
                       autocomplete="off"
@@ -66,7 +66,56 @@
                       value>
                 </div>
               </div>
+              <div class="sign-in__form--wrapper flex 
+                        justify-between align-middle
+                        ">
+                  <div class="remember-checkbox inline-flex">
+                      <input type="checkbox" class="text-14" id="remember" name="remember">
+                      <label for="remember" class="text-14">Remember</label>
+                  </div>
+                  <div class="forget-password text-14 text-[#007fa3] ">
+                      <a class="underline" href="https://my.boostpte.com/account/forgot-password">Forgot Password?</a>
+                  </div>
+              </div>
+              <div class="sign-in__btn ">
+                  <button class="text-[#fff] bg-[#007fa3] 
+                  w-full p-6 opacity-80 
+                  hover:opacity-100
+                  border border-solid border-[#007fa3] rounded-full">
+                    <span class="inline-block px-4 py-1">Sign In</span>
+                  </button>
+              </div>
             </form>
+            <p class="text-14 mb-0 text-center mt-21">
+              Don't have an account yet? 
+              <a href="https://my.boostpte.com/account/sign-up" class="underline text-[#007fa3]">Sign Up</a>
+            </p>
+            <div class="account-form__social mb-15  flex flex-col absolute h-full w-full">
+              <div class="my-21 mx-0 account-form--sign__or">
+                <span class="text-center 
+                leading-tight 
+                absolute border-b-1 border-solid border-[#cacbcc]
+                h-full w-full">
+                  or
+                </span>
+              </div>
+              <div class="account-form__social--container text-[#007fa3] m-auto w-340 h-28.8 absolute ml-14 top-10 ">
+                <div class="group-social">
+                    <div class="group-social__container w-full !important top-0 ">
+                        <a class="align-middle border-1
+                        rounded-50 cursor-pointer flex 
+                        justify-center py-42
+                        border-solid w-full text-14
+                        border-[#007fa3]"
+                        href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?client_id=10249845505-uvots695mivm73hetscpjjjnin9t7a0g.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fprotocol.jframework.live%2Fapi%2Faccounts%2Fauth%2Fgoogle%2Fcallback&response_type=code&scope=openid%20email%20profile&access_type=offline&state=hRjlmQqZ96TQ2%2FahbNSuoL6NvcdsCFqXWiwJUViysF7b0k5r28r%2FdmTy%2Ba%2FaXqzl&prompt=consent&service=lso&o2v=2&flowName=GeneralOAuthFlow">
+                            <img class=" align-middle"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHpSURBVHgBnVPLTttQEJ251zaq+pArlapdVHLUZV9WX2ubVmo3VaN21W6gXxA+oBVBaruq1PAFaVcoEkiwY0W8YIF4hi+I9zxipEQBYt/hXsOFOIQsOAtrxpozZ14XoQcNz7VjZhWAUR4I3PQnQg0JatzsTN5eqIXd8djt7Lx5PQogSgRow2UgLA4vrkxql2lj9+3LCQL6N5Cs+ED5uufZmQoa710n7pj1syCCkCOUjhI+r3zDiB0SWJZm1BLX/VwQRDrWUB/+ZL8cb9w5IyeC+3eD5bBLWNk5pdxNTitoV8ExErN+uDoMB0v3oNOycvez5IEwzIS7JI2hV9tgPW4E1od2hjzyszkuy+o7F8FwzkgIXaZ3cS3euhCFUABEp18CJuh8C1eFgYxCudvUCeMbz+ROshEEU5kWGMpbAeekOoyQqmDHidmotB9CqfVIHYq/9mUmuExx5FezrhMIQT5DH6I/zadBSlaCSGV3Ou/0Jf9uTWiyHHwY/LgZpHdQaT/4ZiBsStOWzTgcefVF5XORYbLFE4g68k0g44WjnQXP2n93KgTFtAud/fn0pzGG6bUNxNBeHqy9j/+r32+NZRIoSFX1Av+iHlIfkICp9a+z49rH3gDVPwPmyWpGZZ/u6e9ITmwekc/1DvgYJYq4kHy7PNkAAAAASUVORK5CYII=" alt="iconGoogle">
+                            <p>Continue with Google</p>
+                        </a>
+                    </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       <div >
